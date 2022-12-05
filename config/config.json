@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "tylus",
-    "password": "MadWizard1508!",
-    "database": "dogsDB",
+    "username": "n1604005",
+    "password": "BeligerentSorceror2!",
+    "database": "dmjdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "tylus",
-    "password": "MadWizard1508!",
-    "database": "dogsDB",
+    "password": "BeligerentSorceror2!",
+    "database": "dmjdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "tylus",
-    "password": "MadWizard1508!",
-    "database": "dogsDB",
+    "password": "BeligerentSorceror2!",
+    "database": "dmjdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
