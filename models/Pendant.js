@@ -15,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Pendant.init({
     name: DataTypes.STRING,
-    colors: DataTypes.ARRAY,
-    sizes: DataTypes.ARRAY
+    color: DataTypes.STRING,
+    sizes: DataTypes.ARRAY(DataTypes.STRING),
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pendant',

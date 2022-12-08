@@ -9,11 +9,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
-      },
-      orderId: {
-        type: Sequelize.INTEGER
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }},
+      order_id: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        field: 'order',
+        onDelete:'CASCADE',
+        references: {
+          model: 'orders',
+          key: 'id'
+        }
       },
       address: {
         type: Sequelize.STRING

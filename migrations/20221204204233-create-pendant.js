@@ -12,8 +12,8 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      colors: {
-        type: Sequelize.ARRAY
+      color: {
+        type: Sequelize.STRING
       },
       sizes: {
         type: Sequelize.ARRAY

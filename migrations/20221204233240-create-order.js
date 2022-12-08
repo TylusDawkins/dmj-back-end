@@ -9,11 +9,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
-      },
-      shipmentId: {
-        type: Sequelize.INTEGER
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }},
+      shipment_id: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        field: 'shipment',
+        onDelete:'CASCADE',
+        references: {
+          model: 'shipments',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
