@@ -1,5 +1,14 @@
 const {Bead} = require('../models')
 
+const CreateBead = async (req, res) => {
+    try {
+        const bead = await Bead.create(req.body)
+        res.send(bead)
+    } catch (error) {
+        throw error
+    }
+}
+
 const GetAllBeads = async (req,res) => {
     try {
         const allBeads = await Bead.findAll()
@@ -32,9 +41,20 @@ const UpdateBead = async (req, res) => {
         throw error
     }
 }
+const DeleteBead = async (req, res) => {
+    try {
+      let beadId = parseInt(req.params.bead_id)
+      await Bead.destroy({where: { id: beadId}})
+      res.send({ message: `Deleted Comment with an id of ${beadId}`})
+    } catch (error) {
+      throw error
+    }
+  }
 
 module.exports = {
+    CreateBead,
     GetAllBeads,
     GetBeadDetails,
-    UpdateBead
+    UpdateBead,
+    DeleteBead
 }

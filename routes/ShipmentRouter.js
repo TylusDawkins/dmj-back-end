@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const controller = require('./controllers')
+const controller = require('../controllers/ShipmentController')
 
 // Implement these routes
 Router.get('/:puppy_id', controller.GetPuppyDetails)

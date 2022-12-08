@@ -1,4 +1,5 @@
 const Router = require('express').Router()
-const PuppyRouter = require('./PuppyRouter')
-Router.use('/puppies', PuppyRouter)
+const BeadRouter = require('./BeadRouter')
+Router.use('/',(req, res) => res.json({ message: 'Welcome to API' }))
+Router.use('/beads', BeadRouter)
 module.exports = Router

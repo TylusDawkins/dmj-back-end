@@ -1,5 +1,6 @@
 const { User } = require('../models')
 
+
 const GetUser = async (req, res) => {
     try {
       const user = await User.findByPk(req.params.puppies_id)
@@ -36,9 +37,9 @@ const UpdateUser = async (req,res) =>{
 
 const DeleteUser = async (req, res) => {
   try {
-    let user_id = parseInt(req.params.user_id)
-    await User.destroy({where: { id: user_id}})
-    res.send({ message: `Deleted Comment with an id of ${user_id}`})
+    const userId = parseInt(req.params.user_id)
+    await User.destroy({where: { id: userId}})
+    res.send({ message: `Deleted Comment with an id of ${userId}`})
   } catch (error) {
     throw error
   }

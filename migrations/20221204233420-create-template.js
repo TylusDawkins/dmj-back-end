@@ -12,7 +12,7 @@ module.exports = {
       type: {
         type: Sequelize.STRING
       },
-      colors: {
+      color: {
         type: Sequelize.ARRAY
       },
       sizes: {
