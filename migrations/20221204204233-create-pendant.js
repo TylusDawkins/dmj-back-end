@@ -16,7 +16,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       sizes: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
+      },
+      image: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

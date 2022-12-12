@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: 'user_id',
@@ -17,16 +17,17 @@ module.exports = {
         references: {
           model: 'users',
           key: 'id'
-        }},
-      shipment_id: {
+        }
+      },
+      shipmentId: {
         type: Sequelize.INTEGER,
         allowNull:false,
-        field: 'shipment',
+        field: 'shipment_id',
         onDelete:'CASCADE',
-        references: {
-          model: 'shipments',
-          key: 'id'
-        }
+        // references: {
+        //   model: 'shipments',
+        //   key: 'id'
+        // }
       },
       createdAt: {
         allowNull: false,
