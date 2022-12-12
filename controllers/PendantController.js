@@ -1,5 +1,14 @@
 const {Pendant} = require('../models')
 
+const CreatePendant = async (req, res) => {
+    try {
+        const pendant = await Pendant.create(req.body)
+        res.send(pendant)
+    } catch (error) {
+        throw error
+    }
+}
+
 const GetAllPendants = async (req,res) => {
     try {
         const allPendants = await Pendant.findAll()
@@ -22,7 +31,7 @@ const GetPendantDetails = async (req, res) => {
 
 const UpdatePendant = async (req, res) => {
     try {
-        const pendantId = parseInt(req.params.oendant_id)
+        const pendantId = parseInt(req.params.pendant_id)
         const updatedPendant = await Pendant.update(req.body, {
             where: { id: pendantId},
             returning: true
@@ -33,8 +42,20 @@ const UpdatePendant = async (req, res) => {
     }
 }
 
+const DeletePendant = async (req, res) => {
+    try {
+      const pendantId = parseInt(req.params.pendant_id)
+      await Pendant.destroy({where: { id: pendantId}})
+      res.send({ message: `Deleted Comment with an id of ${pendantId}`})
+    } catch (error) {
+      throw error
+    }
+  }
+
 module.exports = {
+    CreatePendant,
     GetAllPendants,
     GetPendantDetails,
-    UpdatePendant
+    UpdatePendant,
+    DeletePendant
 }

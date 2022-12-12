@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Template.init({
-    type: DataTypes.STRING,
-    colors: DataTypes.ARRAY,
-    sizes: DataTypes.ARRAY
+    // type: DataTypes.STRING,
+    // color: DataTypes.STRING,
+    // sizes: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'template',

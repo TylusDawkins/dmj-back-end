@@ -1,5 +1,14 @@
 const {Template} = require('../models')
 
+const CreateTemplate = async (req, res) => {
+    try {
+        const Template = await Template.create(req.body)
+        res.send(Template)
+    } catch (error) {
+        throw error
+    }
+}
+
 const GetAllTemplates = async (req,res) => {
     try {
         const allTemplates = await Template.findAll()
@@ -33,18 +42,20 @@ const UpdateTemplate = async (req, res) => {
     }
 }
 
-const DeleteUser = async (req, res) => {
+const DeleteTemplate = async (req, res) => {
     try {
-      let user_id = parseInt(req.params.user_id)
-      await User.destroy({where: { id: user_id}})
-      res.send({ message: `Deleted Comment with an id of ${user_id}`})
+      const templateId = parseInt(req.params.template_id)
+      await Template.destroy({where: { id: templateId}})
+      res.send({ message: `Deleted Comment with an id of ${templateId}`})
     } catch (error) {
       throw error
     }
   }
 
 module.exports = {
+    CreateTemplate,
     GetAllTemplates,
     GetTemplateDetails,
-    UpdateTemplate
+    UpdateTemplate,
+    DeleteTemplate
 }
