@@ -21,12 +21,12 @@ module.exports = {
       order_id: {
         type: Sequelize.INTEGER,
         allowNull:false,
-        field: 'order',
+        field: 'order_id',
         onDelete:'CASCADE',
-        references: {
-          model: 'orders',
-          key: 'id'
-        }
+        // references: {
+        //   model: 'orders',
+        //   key: 'id'
+        // }
       },
       address: {
         type: Sequelize.STRING

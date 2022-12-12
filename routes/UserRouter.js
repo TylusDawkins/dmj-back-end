@@ -2,9 +2,9 @@ const Router = require('express').Router()
 const controller = require('../controllers/UserController')
 
 // Implement these routes
-Router.get('/:puppy_id', controller.GetPuppyDetails)
-Router.post('/:puppy_id', controller.CreatePuppy)
-Router.put('/:puppy_id', controller.UpdatePuppy)
-Router.delete('/:puppy_id', controller.DeletePuppy)
+Router.get('/:user_id', controller.GetUser)
+Router.post('/:user_id', controller.CreateUser)
+Router.put('/:user_id', controller.UpdateUser)
+Router.delete('/:user_id', controller.DeleteUser)
 // Implement these routes
 module.exports = Router

@@ -9,15 +9,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      type: {
-        type: Sequelize.STRING
-      },
-      color: {
-        type: Sequelize.ARRAY
-      },
-      sizes: {
-        type: Sequelize.ARRAY
-      },
+      // type: {
+      //   type: Sequelize.STRING
+      // },
+      // color: {
+      //   type: Sequelize.ARRAY
+      // },
+      // sizes: {
+      //   type: Sequelize.ARRAY
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

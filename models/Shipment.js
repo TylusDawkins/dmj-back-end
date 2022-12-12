@@ -23,13 +23,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Shipment.init({
-    userId: DataTypes.INTEGER,
-    orderId: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
+    order_id: DataTypes.INTEGER,
     address: DataTypes.STRING,
     status: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Shipment',
+    modelName:'Shipment',
     tableName:'shipments'
   });
   return Shipment;

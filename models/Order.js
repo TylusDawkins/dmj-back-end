@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         {
           foreignKey:'order_id',
           onDelete:'CASCADE',
-          onUpdate:'CASCADE'
+          onUpdate:'CASCADE' 
         })
         Order.belongsTo(models.User, {
+          as:'user',
           foreignKey:'user_id',
           onDelete:'CASCADE',
           onUpdate:'CASCADE'
@@ -24,12 +25,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Order.init({
-    userId: DataTypes.INTEGER,
-    shipmentId: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
+    shipment_id: DataTypes.INTEGER,
     
   }, {
     sequelize,
-    modelName: 'Order',
+    modelName:'Order',
     tableName:'orders'
   });
   return Order;
