@@ -1,5 +1,5 @@
 {
-  "name": "u3_lab_sequelize_api_from_scratch",
+  "name": "dmj_back_end",
   "version": "1.0.0",
   "description": "![Baloo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FEmbellishedWideEastrussiancoursinghounds-size_restricted.gif&f=1&nofb=1)",
   "main": "server.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TylusDawkins/u3_lab_sequelize_API_from_scratch.git"
+    "url": "git+https://github.com/TylusDawkins/dmj_back_end.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TylusDawkins/u3_lab_sequelize_API_from_scratch/issues"
+    "url": "https://github.com/TylusDawkins/dmj_back_end/issues"
   },
-  "homepage": "https://github.com/TylusDawkins/u3_lab_sequelize_API_from_scratch#readme",
+  "homepage": "https://github.com/TylusDawkins/dmj_back_end#readme",
   "dependencies": {
     "@ngneat/falso": "^4.0.0",
     "body-parser": "^1.20.1",
