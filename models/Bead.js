@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Bead extends Model {
     /**
@@ -15,12 +13,18 @@ module.exports = (sequelize, DataTypes) => {
   }
   Bead.init({
     name: DataTypes.STRING,
-    color: DataTypes.STRING,
+    description: DataTypes.STRING,
+    colors: DataTypes.ARRAY(DataTypes.STRING),
     sizes: DataTypes.ARRAY(DataTypes.STRING),
+    shape: DataTypes.STRING,
     image: DataTypes.STRING,
+    materials: DataTypes.ARRAY(DataTypes.STRING),
+    natural: DataTypes.BOOLEAN,
+    supplier: DataTypes.STRING,
+    supplier_sku: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Bead',
+    modelName:'Bead',
     tableName:'beads'
   });
   return Bead;

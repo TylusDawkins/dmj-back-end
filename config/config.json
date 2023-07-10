@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "n1604005",
+    "username": "postgres",
     "password": "BeligerentSorceror2!",
     "database": "dmjdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "tylus",
+    "username": "postgres",
     "password": "BeligerentSorceror2!",
     "database": "dmjdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "tylus",
+    "username": "postgres",
     "password": "BeligerentSorceror2!",
     "database": "dmjdb",
     "host": "127.0.0.1",

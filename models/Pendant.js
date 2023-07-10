@@ -15,9 +15,16 @@ module.exports = (sequelize, DataTypes) => {
   }
   Pendant.init({
     name: DataTypes.STRING,
-    color: DataTypes.STRING,
+    description: DataTypes.STRING,
+    colors: DataTypes.ARRAY(DataTypes.STRING),
     sizes: DataTypes.ARRAY(DataTypes.STRING),
-    image: DataTypes.STRING
+    shape: DataTypes.STRING,
+    image: DataTypes.STRING,
+    materials: DataTypes.ARRAY(DataTypes.STRING),
+    natural: DataTypes.BOOLEAN,
+    drop: DataTypes.BOOLEAN,
+    supplier: DataTypes.STRING,
+    supplier_sku: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Pendant',
